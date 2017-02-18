@@ -1,0 +1,59 @@
+*{ margin: 0; padding: 0; text-decoration: none;}
+#container {
+    width:500px;
+    height:750px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+#list{
+    width:2000px;
+    height: 750px;
+    position: absolute;
+    z-index: 1;
+}
+#list img {
+    float: left;
+}
+#buttons{
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#buttons span{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333333;
+    float: left;
+    border: 1px solid #fff;
+    margin-right: 8px;
+}
+#buttons .on {
+    background: #ffffff;
+}
+
+.arrow{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    background-color: RGBA(0,0,0,.3);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+.arrow:hover { background-color: RGBA(0,0,0,.7);}
+#container:hover .arrow { display: block;}
+#left { left: 0px;}
+#right { right: 0px;}
