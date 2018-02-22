@@ -1,2 +1,2 @@
 My online resume
-add some thing
+add some things
