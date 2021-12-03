@@ -1,36 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>你好，我的世界。</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</head>
-<body>
- 
-    <div class="hd">
-        <img class="img-h1" src="img/card.png" alt="">
-        <div class="content">
-            <h2>行到水穷处  坐看云起时000</h2>
-            <span>You go your way,I'll go your way too.</span>
-            <div class="hr"></div>
-            <ul class="list1">
-                <li><a target="_blank" href="http://www.yojiu.com/">项目一</a></li>
-                <li><a target="_blank" href="https://ssssnack.github.io/snack/ResponsiveWeb/src/index.html">项目二</a></li>
-                <li><a target="_blank" href="https://ssssnack.github.io/snack/code/index.html">项目三</a></li>
-                <li><a target="_blank" href="http://vuejssellapp.t.imooc.io/#!">项目四</a></li>
-                
-            </ul>
-       
-        </div>
-    </div>
-    <script>
-
-        var list1=document.getElementsByClassName("list1");
-        var Oli=list1[0].getElementsByTagName("li");
-      
-        
-
-    </script>
-</body>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
